@@ -1,23 +1,33 @@
+
 package com.volunteer.entity;
+/**
+ * @Description: TODO
+ *
+ * @author miaominfeng
+ * @date 2019年1月25日 下午3:40:40
+ * @version V1.0
+ * @Company: 深圳卫宁中天软件有限公司 *
+ * @Copyright (c) 2019, miaominfeng@winning.com.cn All Rights Reserved. 
+ */
 
 import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-@Entity
-@Table(name="t_acti")
+//@Entity
+//@Table(name="t_acti")
 public class Acti {
 	private Long id;
 	private String title;  //标题
 	private String content; //服务内容
 	private String fwyq;//服务要求
-	private String hdjj;//活动�?�?
+	private String hdjj;//活动�?�?
 	private String xxdz;//详细地址
-	private String fbman;//联系�?
+	private String fbman;//联系�?
 	private String lxfs;//联系方式
 	@DateTimeFormat(pattern="yyyy/MM/dd")
-	private Date beginTime;//活动�?始时�?
+	private Date beginTime;//活动�?始时�?
 	@DateTimeFormat(pattern="yyyy/MM/dd")
 	private Date endTime;//活动结束时间
 	private String img;//图片
@@ -25,11 +35,11 @@ public class Acti {
 	private String fbzz;//发布组织
 	@DateTimeFormat(pattern="yyyy/MM/dd")
 	private Date fbtime;//发布时间
-	private Integer state;//状�??
+	private Integer state;//状�??
 	private Integer zmrs;//招募人数
 	private Integer zan;//点赞次数
 	private Integer attention;//关注
-	private String attentionName;//关注人名�?
+	private String attentionName;//关注人名�?
 	private Integer duration;//时长
 	public Acti() {
 		super();		
@@ -79,8 +89,8 @@ public class Acti {
 		this.attention = attention;
 	}
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//@Id
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public Long getId() {
 		return id;
 	}
@@ -207,3 +217,4 @@ public class Acti {
 	
 
 }
+

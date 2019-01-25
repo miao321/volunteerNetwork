@@ -2,28 +2,22 @@ package com.volunteer.entity;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-@Entity
-@Table(name="t_borad")
+//@Entity
+//@Table(name="t_borad")
 public class Borad {
 	private Long id;
 	private String title;    //公告标题
 	private String content;  //公告内容
-	private String fbman;    //发布�?
+	private String fbman;    //发布�?
 	private String img;      //照片
 	@DateTimeFormat(pattern="yyyy/MM/dd")
 	private Date fbtime;     //发布时间
 	private String fblx;     //发布类型
-	private Integer state;   //显示状�??
+	private Integer state;   //显示状�??
 	
 	public Borad() {
 		super();
@@ -38,8 +32,8 @@ public class Borad {
 		this.fblx = fblx;
 		this.state = state;
 	}
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public Long getId() {
 		return id;
 	}
